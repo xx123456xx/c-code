@@ -1,0 +1,25 @@
+函数的声明与定义具体用法
+声明放在头文件中.h中
+定义放在源文件中.c中
+Add.h
+#define _CRT_SECURE_NO_WARNINGS//函数的声明
+#ifndef __ADD_H__
+#define __ADD_H__
+int Add(int x,int y);
+#endif
+#define _CRT_SECURE_NO_WARNINGS//函数的定义
+int Add(int x,int y)
+{
+	return x+y;
+}
+#define _CRT_SECURE_NO_WARNINGS//函数的运行
+#include<stdio.h>
+#include"add.h"
+int main()
+{
+	int a=5;
+	int b=20;
+	int sum=Add(a,b);
+	printf("sum=%d\n",sum);
+	return 0;
+}
